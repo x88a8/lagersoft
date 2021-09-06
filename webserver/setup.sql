@@ -1,9 +1,10 @@
-CREATE TABLE `storage` (
-	`id` INT NOT NULL AUTO_INCREMENT,
-	`product_name` TEXT(100) NOT NULL,
-	`expiration_date` DATE,
-	`barcode_number` INT(50) NOT NULL,
-	`amount_availible` INT,
-	`amount_added` INT,
-	PRIMARY KEY (`id`)
-);
+CREATE TABLE kitchen ( 
+id INT(20) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+barcode_id INT(20) NOT NULL,
+product_name VARCHAR(50) NOT NULL, 
+portion_size VARCHAR(10) NOT NULL,
+expired DATE NOT NULL,  
+amount INT(3),
+where_at VARCHAR (30),
+reg_date TIMESTAMP 
+); 

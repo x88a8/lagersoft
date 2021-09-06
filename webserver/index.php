@@ -1,4 +1,33 @@
 <?php
+$connection = mysql_connect('localhost', 'root', ''); //The Blank string is the password
+mysql_select_db('hrmwaitrose');
+
+$query = "SELECT * FROM employee"; //You don't need a ; like you do in SQL
+$result = mysql_query($query);
+
+function display_data($data)
+{
+    $output = '<table>';
+    foreach ($data as $key => $var)
+    {
+        $output .= '<tr>';
+        foreach ($var as $k => $v)
+        {
+            if ($key === 0)
+            {
+                $output .= '<td><strong>' . $k . '</strong></td>';
+            }
+            else
+            {
+                $output .= '<td>' . $v . '</td>';
+            }
+        }
+        $output .= '</tr>';
+    }
+    $output .= '</table>';
+    echo $output;
+}
+mysql_close(); //Make sure to close out the database connection
 
 ?>
 <html>
@@ -13,25 +42,7 @@
           			<input type="submit" name="button2" class="button" value="Show All" />
     			</form>
 			<?php
-				if(array_key_exists('button1', $_POST)) {
-            				show_kitchen();
-        			}
-        			else if(array_key_exists('button2', $_POST)) {
-            				show_pantry();
-        			}
-				else if(array_key_exists('button3', $_POST)) {
-            				show_all();
-        			}
-        			function show_kitchen() {
-         				echo "This is everything thats in the kitchen";
-        			}
-        			function show_pantry() {
-            				echo "This is everything thats in the pantry";
-        			}
-				function show_all() {
-            				echo "<div id="">
-						</div>";
-        			} 
+				display_data
 			?>
 		</div>
 			
