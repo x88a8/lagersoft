@@ -12,7 +12,7 @@ A Web server to host the table of whats availible, in what quantity and when it 
 A Java Program to add new products using a USB/Bluetooth Barcode Scanner.
 
 This uses:
-  - https://www.apachefriends.org/de/index.html XAMPP
+  - https://www.apachefriends.org/de/index.html XAMPP v.8.0.10 (portable)
 
 Features:
 
