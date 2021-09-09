@@ -1,0 +1,58 @@
+html {
+    background-color: #444444;
+    color:white;
+    font: 15px Consolas, sans-serif;
+}
+body {
+    margin: 50px;
+    margin-bottom: 10px;
+    border: 1px solid lightblue;
+    padding: 5px;
+}
+
+a {
+    border: 1px solid white;
+    padding:3px;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 76%;
+    margin: 20px;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+    color: black;
+  }
